@@ -59,7 +59,7 @@ else{
 const [loc,setLoc]=useState([])
 const driverpress=()=>{
     
-    axios.post('http://192.168.194.40:3001/locdata',{name,number,busno,latlng})
+    axios.post('http://192.168.41.40:3001/locdata',{name,number,busno,latlng})
     .then(res=>console.log(res.data))
     .catch(err=>console.log(err))
     
@@ -71,7 +71,7 @@ const driverpress=()=>{
 }
 
 const getloc=()=>{
-    axios.get('http://192.168.194.40:3001/getlocdata')
+    axios.get('http://192.168.41.40:3001/getlocdata')
         .then(res=>{
          setLoc(res.data.data)})
         .catch(err=>console.log(err))
@@ -159,7 +159,7 @@ async function getData(){
     console.log(token);
     
    axios
-    .post('http://192.168.194.40:3001/userdata',{token: token})
+    .post('http://192.168.41.40:3001/userdata',{token: token})
     
     .then(res =>{console.log(res)
         setUserData(res.data.data)
@@ -274,7 +274,7 @@ const handleBackPress = () => {
                 </TouchableOpacity>
                 <Text style={styles.info_txt}>Hi {name} {userData.usertype==='DRIVER'?"lets drive!":"Be ready"}</Text>
                 <TouchableOpacity style={styles.option_btn} >
-                    <Ionicons name="chatbubble" size={30} color="black" />
+                  
                         
                 </TouchableOpacity>
                 </View>

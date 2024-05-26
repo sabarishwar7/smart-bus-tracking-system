@@ -19,7 +19,7 @@ const SettingsView=({navigation})=>{
         console.log(token);
         
        axios
-        .post('http://192.168.194.40:3001/userdata',{token: token})
+        .post('http://192.168.41.40:3001/userdata',{token: token})
         
         .then(res =>{console.log(res)
             setUserData(res.data.data)

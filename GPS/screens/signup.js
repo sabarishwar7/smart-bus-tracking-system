@@ -29,7 +29,7 @@ const handleSubmit= (e) => {
         password:password,
 };
 
-    Axios.post('http://192.168.194.40:3001/register',userdata)
+    Axios.post('http://192.168.41.40:3001/register',userdata)
     .then(res => {console.log(res.data)
         Toast.show("Registered Successfully")
         navigation.navigate('Login')

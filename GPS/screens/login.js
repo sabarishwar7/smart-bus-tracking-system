@@ -22,7 +22,7 @@ const LoginView = ({navigation}) => {
         }
 console.log(userData)
         axios
-        .post('http://192.168.194.40:3001/login-user',userData)
+        .post('http://192.168.41.40:3001/login-user',userData)
         .then(res=>{
             if(res.data.status=='OK'){
                 AsyncStorage.setItem('keepLoggedIn',JSON.stringify(true))
